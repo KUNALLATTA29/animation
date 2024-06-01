@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Slanted Line</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body{
+        background-color: black;
+        position: relative;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .cont{
+        border: 2px solid yellow;
+        width: 400px;
+        height: 300px;
+        position: relative;
+      }
+      .line1{
+        background-color: aqua;
+        width: 150px;
+        padding: 8px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(-50deg);
+        left: 30%;
+        animation: zoom1 1s linear 0s infinite normal;
+      }
+      .line2{
+        background-color: aqua;
+        width: 150px;
+        padding: 8px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(50deg);
+        left: 30%;
+        animation: zoom2 1s linear 0s infinite normal;
+      }
+
+      @keyframes zoom2{
+        0% {transform: rotate(50deg);}
+        50% {transform: rotate(1deg);}
+        100% {transform: rotate(50deg);}
+      }
+      @keyframes zoom1{
+        0% {transform: rotate(-50deg);}
+        50% {transform: rotate(-1deg);}
+        100% {transform: rotate(-50deg);}
+      }
+      
+   
+    </style>
+</head>
+<body>
+  <div class="cont">
+    <div class="line1"></div>
+    <div class="line2"></div>
+  </div>
+    
+</body>
+</html>
